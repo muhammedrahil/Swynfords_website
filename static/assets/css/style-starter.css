@@ -15250,7 +15250,7 @@ nav ul li a:hover {
 
 .w3l-main-slider .banner-view {
   min-height: calc(100vh - 20px);
-  /* background: url(../images/bg.jpg) no-repeat center; */
+  background: url(../images/bg.jpg) no-repeat center;
   -ms-background-size: cover;
   background-size: cover;
   z-index: 0;
