@@ -19,11 +19,10 @@ def mail_send(mail_data):
         headers={'Message-ID': 'foo'},
     )
     email.send()
-    return print('mail')
+    return "Successfully sent"
   my_thread = threading.Thread(target=send(mail_data))
   my_thread.start()
-  return print('mail')
-
+  return "Successfully sent"
 
 
 def contact(request):
