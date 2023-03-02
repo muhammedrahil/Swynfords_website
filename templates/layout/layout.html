@@ -18,7 +18,7 @@
   <header id="site-header" class="w3lhny-head fixed-top">
     <div class="container">
       <nav class="navbar navbar-expand-lg stroke px-0">
-        <h1> <a class="navbar-brand" href="index.html">
+        <h1> <a class="navbar-brand" href="{% url 'index' %}">
             <span style="margin-left: 22px;"> Swynf<span class="sublog">o</span>rds</span> <br>
             <p style="color: rgb(86, 189, 165);"> - Enchanting Technology -</p>
 
@@ -37,16 +37,16 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mx-lg-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
+              <a class="nav-link" href="">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
             </li>
 
           </ul>
@@ -71,36 +71,13 @@
       </nav>
     </div>
   </header>
-  <!-- main-slider -->
-<section class="w3l-main-slider" id="home">
-  <div class="companies20-content">
-    <!-- <div class="owl-one owl-carousel owl-theme"> -->
-      <div class="item">
-        <li>
-          <div class="slider-info  banner-view banner-top1 bg bg2">
-            <div class="banner-info">
-              <div class="container">
-                <div class="banner-info-bg">
-                  <h5>Welcome to Swynfords </h5>
-                  <p class="mt-md-4 mt-3">your number one source for all things Software. We're dedicated to 
-                    providing you with the best User Experience, with a focus on dependability and customer service.
-                  </p>
-                  <a class="btn btn-style btn-white mt-sm-5 mt-4 mr-2 mb-lg-5" href="#read"> Contact Us
-                  </a>
-                  <a class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2 mb-lg-5" href="about.html">
-                    Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-      </div>
-     <!-- </div> -->
-  </div>
-</section>
-<!-- /main-slider -->
 
-  {% block all_contents %} {% endblock %}}
+
+  {% block all_contents %} {% endblock %}
+  <!-- main-slider -->
+
+
+  
   <!-- footer -->
   <footer class="w3l-footer-29-main">
     <div class="footer-29-w3l py-5">
@@ -108,16 +85,17 @@
         <div class="row footer-top-29">
           <div class="col-lg-6 col-md-6 footer-list-29 footer-1 pr-lg-5">
             <div class="footer-logo mb-3">
-              <a class="footer-brand-logo" href="index.html"><span class="sublog">A</span>telier</a>
+              <a class="footer-brand-logo" href="{% url 'index' %}">Swynf<span class="sublog">o</span>rds</a>
 
             </div>
-            <p class="pr-lg-5">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at
-              tempufddfel. Lorem ipsum dolor sit amet Semper at elit.Lorem ipsum, dolor sit amet consectetur adipisicing
-              elit. Vitae voluptatum.</p>
+            <p class="pr-lg-5">The team has expertise in working with multiple National-International 
+              companies in developing the softwares and websites with impactful results. We believe in 
+              the satisfactions and success of our clients by providing in built solutions and the followed 
+              reputation is our happiness.</p>
             <div class="main-social-footer-29 mt-4">
               <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
               <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
-              <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+              <a href="https://instagram.com/swynfords?igshid=Mzc0YWU1OWY=" class="instagram"><span class="fa fa-instagram"></span></a>
               <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
             </div>
           </div>
@@ -143,15 +121,13 @@
     <section class="w3l-copyright">
       <div class="container">
         <div class="row bottom-copies">
-          <p class="col-lg-8 copy-footer-29">© 2020 Atelier. All rights reserved. Design by <a
-              href="https://w3layouts.com/" target="_blank">
-              W3layouts</a></p>
+          <p class="col-lg-8 copy-footer-29">© 2020 Swynfords. All rights reserved.</p>
 
           <div class="col-lg-4 footer-list-29">
             <ul class="d-flex text-lg-right">
-              <li><a href="#careers"> Careers</a></li>
+              <li><a href="#"> Careers</a></li>
               <li class="mx-lg-5 mx-md-4 mx-3"><a href="#privacymy-lg-0 my-4">Privacy Policy</a></li>
-              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="{% url 'contact' %}">Contact us</a></li>
             </ul>
           </div>
 
@@ -187,13 +163,13 @@
 
   <!-- //copyright -->
   <!-- Template JavaScript -->
-  <script src="assets/js/jquery-3.3.1.min.js"></script>
-  <script src="assets/js/theme-change.js"></script>
+  <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'assets/js/theme-change.js' %}"></script>
   <!--search-bar-->
-  <script src="assets/js/search.js"></script>
+  <script src="{% static 'assets/js/search.js' %}"></script>
   <!--//search-bar-->
   <!-- owl carousel -->
-  <script src="assets/js/owl.carousel.js"></script>
+  <script src="{% static 'assets/js/owl.carousel.js' %}"></script>
   <!-- script for banner slider-->
   <script>
     $(document).ready(function () {
@@ -281,8 +257,8 @@
   </script>
   <!-- //script for tesimonials carousel slider -->
   <!-- stats number counter-->
-  <script src="assets/js/jquery.waypoints.min.js"></script>
-  <script src="assets/js/jquery.countup.js"></script>
+  <script src="{% static 'assets/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.countup.js' %}"></script>
   <script>
     $('.counter').countUp();
   </script>
@@ -316,7 +292,7 @@
   </script>
   <!--//MENU-JS-->
 
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
 
 </body>
 

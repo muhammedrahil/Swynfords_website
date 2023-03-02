@@ -33,3 +33,7 @@ def contact(request):
                  "message" : request.POST.get('message',None)}
     mail_send(mail_data)
   return render(request, 'contact.html')
+
+def about(request):
+  
+  return render(request, 'about.html')
