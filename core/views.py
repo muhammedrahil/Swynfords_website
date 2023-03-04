@@ -24,7 +24,7 @@ def mail_send(request,mail_data):
       'domain'  : current_site,
       "subject" : mail_data.get('subject')
   })
-  to_email=mail_data.get('email')
+  to_email="SwynfordsPvtLtd@gmail.com"
   send_email = EmailMessage(mail_subject,massage,to=[to_email])
   send_email.send()
   return print("Successfully sent")
