@@ -10,7 +10,7 @@ import datetime
 
 
 def index(request):
-  visited(request,"index") 
+  # visited(request,"index") 
   return render(request, 'index.html')
 
 
@@ -42,11 +42,11 @@ def contact(request):
     my_thread.start()
     messages.success(request,'Sent message Successfully')
     return redirect("contact")
-  visited(request,"contact")
+  # visited(request,"contact")
   return render(request, 'contact.html')
 
 def about(request):
-  visited(request,"about")
+  # visited(request,"about")
   return render(request, 'about.html')
 
 
